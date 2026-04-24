@@ -83,6 +83,13 @@ public class Main {
                         while (adicionando) {
                             System.out.println("\n--- ADICIONAR ITEM ---");
                             System.out.print("Digite o codigo do produto: ");
+
+                            if (!scanner.hasNextInt()) {
+                                System.out.println("   Entrada invalida! Digite um numero.");
+                                scanner.nextLine();
+                                continue;
+                            }
+
                             int codigo = scanner.nextInt();
                             scanner.nextLine();
 
@@ -164,7 +171,7 @@ public class Main {
                             if (categoria >= 0 && categoria <= 3) {
                                 entradaValida = true;
                             } else {
-                                System.out.println("   Opção invalida! Digite 0, 1, 2 ou 3.");
+                                System.out.println("   Opcao invalida! Digite 0, 1, 2 ou 3.");
                             }
                         } else {
                             System.out.println("   Entrada invalida! Digite um numero.");
@@ -277,4 +284,3 @@ public class Main {
     }
 }
 
-        
